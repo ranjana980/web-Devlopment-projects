@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calculater
+    </title>
+    <link rel="stylesheet" href="calculate.css">
+</head>
+
+<body>
+    <div id="Calculator">
+        <h2 class="cal">Calculator</h2>
+        <div id="display" class=" bg-light input"></div>
+        <div class="Calculater-body">
+            <button class="button" value="7" onclick="display('7')">7</button>
+            <button class="button" value="8" onclick="display('8')">8</button>
+            <button class="button" value="9" onclick="display('9')">9</button>
+            <button class="button" value="+" onclick="display('+')">+</button>
+            <button class="button" value="6" onclick="display('6')">6</button>
+            <button class="button" value="5" onclick="display('5')">5</button>
+            <button class="button" value="4" onclick="display('4')">4</button>
+            <button class="button" value="-" onclick="display('-')">-</button>
+            <button class="button" value="3" onclick="display('3')">3</button>
+            <button class="button" value="2" onclick="display('2')">2</button>
+            <button class="button" value="1" onclick="display('1')">1</button>
+            <button class="button" value="/" onclick="display('/')">/</button>
+            <button class="button" value="0" onclick="display('0')">0</button>
+            <button class="button" value="." onclick="display('.')">.</button>
+            <button class="button" value="=" onclick="solution('=')">=</button>
+            <button class="button" value="*" onclick="display('*')">*</button>
+            <button class="button" value="Clear" onclick="clearScreen('')">Clear</button>
+            <button class="button" value="X" onclick="display('')">X</button>
+            <button class="button" value="%" onclick="display('%')">%</button>
+            <button class="button" value="Exit" onclick="display('//')">//</button>
+        </div>
+    </div>
+    <script>
+        function display(data) {
+            document.getElementById("display").innerHTML+=data
+        }
+        function solution(){
+            var equal=document.getElementById("display").innerHTML
+            // console.log(equal)
+            var oprator=eval(equal)
+            document.getElementById("display").innerHTML=oprator
+            // console.log(equal.value=oprator)
+            // document.getElementById("display")
+        }
+        function clearScreen() {
+            document.getElementById("display").innerHTML =""
+        }
+
+    </script>
+</body>
+
+</html>

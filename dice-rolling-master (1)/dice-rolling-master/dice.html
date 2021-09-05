@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling</title>
+    <style>
+        img {
+            display: flex;
+            float: left;
+            height: 210px;
+            width: 210px;
+            border-radius: 30px;
+            margin-top: 10%;
+            margin-left: 15%;
+        }
+        .container {
+            margin: 10%;
+            height: 500px;
+            width: 800px;
+            background-color: aqua;
+            align-items: center;
+            border: 5px solid;
+            margin-left: 25%;
+        }
+        button {
+            margin-top: 15%;
+            margin-right: 6%;
+            margin-left: 42%;
+            padding: 20px;
+            font-size: 15px;
+            background-color: brown;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        body{
+            background-color: rgb(206, 32, 67);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="first" src="dice1.png">
+        <img id="second" src="dice5.png">
+        <button class="button" onclick="Rolling()">Roll The Dice</button>
+    </div>
+    <script>
+        let dice = ["dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.png", "dice6.png"]
+        function Rolling() {
+            color = [Math.floor(Math.random() * dice.length)]
+            console.log(document.getElementById("first").src=dice[color]);
+            color1 = [Math.floor(Math.random() * dice.length)]
+            console.log(document.getElementById("second").src=dice[color1])
+        }
+    </script>
+</body>
+</html>
